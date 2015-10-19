@@ -24,3 +24,24 @@ int calculator(char *str)
 	}
 	return sum;
 }
+void test(char* string, int answer)
+{
+	if (calculator(string) == answer)
+		cout << "OK" << endl;
+	else
+		cout << "FAIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
+}
+
+int main()
+{
+	char string1[] = "34+21-11";
+	test(string1, 44);
+	char string2[] = "100-56+28-59+228";
+	test(string2, 241);
+	char string3[] = "1488-322-980+3";
+	test(string3, 189);
+	char string4[] = "42-67-89-76";
+	test(string4, -190);
+	char string5[] = "567+321-890+2015-1945";
+	test(string5, 68);
+	
